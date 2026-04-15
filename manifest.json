@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "FocusForge Copy",
+  "version": "1.0",
+  "description": "Block distracting websites and earn points for every focused minute.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting",
+    "alarms"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["dashboard/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

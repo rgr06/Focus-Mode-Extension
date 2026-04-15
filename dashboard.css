@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #020617;
+  color: #f8fafc;
+}
+
+.dashboard {
+  max-width: 1000px;
+  margin: auto;
+  padding: 24px;
+}
+
+/* ---------- HEADER ---------- */
+.top-bar {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.top-bar h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.subtitle {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* ---------- MENU ---------- */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.menu button {
+  padding: 10px 20px;
+  border-radius: 24px;
+  border: none;
+  background: #1e293b;
+  color: #f8fafc;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.menu button.active {
+  background: #22c55e;
+  color: #022c22;
+}
+
+/* ---------- SECTIONS ---------- */
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+/* ---------- OVERVIEW ---------- */
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.summary-card {
+  background: linear-gradient(145deg, #1e293b, #0f172a);
+  padding: 20px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.summary-card span {
+  display: block;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.summary-card small {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* ---------- REWARDS ---------- */
+.voucher-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.voucher {
+  background: #1e293b;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.redeem-btn {
+  background: #22c55e;
+  color: #022c22;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.redeem-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ---------- HISTORY ---------- */
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+.calendar-day {
+  background: linear-gradient(145deg, #14532d, #052e16);
+  border-radius: 14px;
+  padding: 14px;
+  text-align: center;
+}
+
+.calendar-day strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.calendar-day span {
+  font-size: 13px;
+  opacity: 0.85;
+}
